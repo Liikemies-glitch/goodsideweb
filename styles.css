@@ -23,7 +23,6 @@
 }
 html {
     font-size: 16px;
-    scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -1572,5 +1571,128 @@ h1, h2, h3, h4, h5, h6 {
     .contact-booking {
         margin: 0 calc(var(--spacing-md) * -1);
         border-radius: 0;
+    }
+}
+
+/* References Page Styles */
+.hero--small {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    background-color: var(--light-background);
+}
+
+.hero--small .hero__title {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+.hero--small .hero__subtitle {
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+.references {
+    padding: var(--spacing-sm) 0 var(--spacing-xxl);
+    background-color: var(--light-background);
+}
+
+.references__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-md);
+}
+
+.reference-card {
+    background: var(--background);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.reference-card:hover {
+    transform: translateY(-5px);
+}
+
+.reference-card__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.reference-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.reference-card:hover .reference-card__image img {
+    transform: scale(1.05);
+}
+
+.reference-card__content {
+    padding: var(--spacing-lg);
+}
+
+.reference-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--secondary-color);
+}
+
+.reference-card__description {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.reference-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.reference-card__author {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+.reference-card__results {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hero--small {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero--small .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .references {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .references__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .reference-card__content {
+        padding: var(--spacing-md);
     }
 } 
