@@ -348,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .problem-card {
-    background: linear-gradient(135deg, rgba(255, 0, 84, 0.05), rgba(255, 0, 84, 0.1));
+    background: rgba(255, 0, 55, 0.096);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 0, 84, 0.1);
     padding: var(--spacing-xl);
@@ -356,24 +356,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-}
-
-.problem-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-    opacity: 1;
-    transition: opacity 0.3s ease;
-}
-
-.problem-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(255, 0, 84, 0.1);
-    background: linear-gradient(135deg, rgba(255, 0, 84, 0.08), rgba(255, 0, 84, 0.15));
 }
 
 .problem-card h3 {
