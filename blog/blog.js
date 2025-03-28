@@ -113,7 +113,7 @@ class BlogManager {
                     id: 1,
                     title: 'SaaS-mittarit, joita jokaisen kasvuyrityksen tulisi seurata',
                     excerpt: 'Oikeiden mittareiden seuraaminen on kriittistä SaaS-liiketoiminnan kasvattamisessa. Tässä artikkelissa käymme läpi tärkeimmät mittarit.',
-                    image: '../images/blog/saas-metrics.jpg',
+                    image: '/images/blog/saas-metrics.jpg',
                     category: 'growth',
                     date: '2024-03-15',
                     readTime: '5 min'
@@ -122,12 +122,47 @@ class BlogManager {
                     id: 2,
                     title: 'Design system: Miksi ja miten rakentaa skaalautuva muotokieli',
                     excerpt: 'Design system on keskeinen työkalu modernissa tuotekehityksessä. Se nopeuttaa kehitystä ja varmistaa yhtenäisen käyttökokemuksen.',
-                    image: '../images/blog/design-system.jpg',
+                    image: '/images/blog/design-system.jpg',
                     category: 'ux',
                     date: '2024-03-10',
                     readTime: '7 min'
                 },
-                // Add more articles as needed
+                {
+                    id: 3,
+                    title: 'Tekoäly tuotesuunnittelussa: Mahdollisuudet ja haasteet',
+                    excerpt: 'Tekoälyn hyödyntäminen tuotesuunnittelussa avaa uusia mahdollisuuksia. Tutustumme käytännön esimerkkeihin ja parhaisiin käytäntöihin.',
+                    image: '/images/blog/ai-design.jpg',
+                    category: 'ai',
+                    date: '2024-03-05',
+                    readTime: '6 min'
+                },
+                {
+                    id: 4,
+                    title: 'Konversio-optimointi SaaS-liiketoiminnassa',
+                    excerpt: 'Konversio-optimointi on keskeinen osa SaaS-liiketoiminnan kasvattamista. Käymme läpi tehokkaimmat tekniikat ja työkalut.',
+                    image: '/images/blog/conversion.jpg',
+                    category: 'growth',
+                    date: '2024-03-01',
+                    readTime: '8 min'
+                },
+                {
+                    id: 5,
+                    title: 'Käyttäjätutkimus tuotekehityksen tukena',
+                    excerpt: 'Käyttäjätutkimus on avain onnistuneeseen tuotekehitykseen. Opas käyttäjätutkimuksen suunnitteluun ja toteutukseen.',
+                    image: '/images/blog/user-research.jpg',
+                    category: 'ux',
+                    date: '2024-02-25',
+                    readTime: '7 min'
+                },
+                {
+                    id: 6,
+                    title: 'Product-Market Fit: Miten löytää ja validoida',
+                    excerpt: 'Product-Market Fit on startup-maailman pyhä graali. Käymme läpi konkreettiset askeleet sen löytämiseen ja validointiin.',
+                    image: '/images/blog/product-market.jpg',
+                    category: 'product',
+                    date: '2024-02-20',
+                    readTime: '9 min'
+                }
             ]
         };
     }
