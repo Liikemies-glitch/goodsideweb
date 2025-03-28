@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Good Side Blog | Blogi</title>
+    <meta name="description" content="Lue uusimmat artikkelit digitaalisesta tuotekehityksestä, käyttäjäkokemuksesta ja kasvuliiketoiminnasta.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="blog-header">
+        <nav class="blog-nav">
+            <a href="/" class="blog-nav__logo">
+                <img src="../images/brand/logo.webp" alt="The Good Side" width="140" height="32">
+            </a>
+            <div class="blog-nav__controls">
+                <button class="theme-toggle" aria-label="Vaihda teemaa">
+                    <svg class="theme-toggle__icon" viewBox="0 0 24 24">
+                        <path class="sun" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        <path class="moon" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="blog-hero">
+            <h1 class="hero__title">Blogi</h1>
+            <p>Artikkeleita digitaalisesta tuotekehityksestä, käyttäjäkokemuksesta ja kasvuliiketoiminnasta.</p>
+        </div>
+        <div class="blog-filters">
+            <div class="search-container">
+                <input type="search" id="blog-search" placeholder="Etsi artikkeleita..." aria-label="Etsi artikkeleita">
+                <svg class="search-icon" viewBox="0 0 24 24">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <div class="filter-tags" id="filter-tags">
+                <button class="filter-tag active" data-category="all">Kaikki</button>
+                <button class="filter-tag" data-category="ux">Käyttäjäkokemus</button>
+                <button class="filter-tag" data-category="product">Tuotekehitys</button>
+                <button class="filter-tag" data-category="growth">Kasvu</button>
+                <button class="filter-tag" data-category="ai">Tekoäly</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-grid" id="blog-grid">
+        <!-- Articles will be dynamically inserted here -->
+    </main>
+
+    <div class="loading-spinner" id="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <template id="article-template">
+        <article class="blog-card">
+            <a href="" class="blog-card__link">
+                <div class="blog-card__image">
+                    <img src="" alt="" loading="lazy">
+                    <div class="blog-card__category"></div>
+                </div>
+                <div class="blog-card__content">
+                    <h2 class="blog-card__title"></h2>
+                    <p class="blog-card__excerpt"></p>
+                    <div class="blog-card__meta">
+                        <time datetime=""></time>
+                        <span class="blog-card__read-time"></span>
+                    </div>
+                </div>
+            </a>
+        </article>
+    </template>
+
+    <footer class="blog-footer">
+        <div class="blog-footer__content">
+            <div class="blog-footer__main">
+                <a href="/" class="blog-footer__logo">
+                    <img src="../images/brand/logo.webp" alt="The Good Side" width="140" height="32">
+                </a>
+                <p>Autamme yrityksiä rakentamaan parempia digitaalisia tuotteita.</p>
+            </div>
+            <div class="blog-footer__links">
+                <nav>
+                    <a href="/">Etusivu</a>
+                    <a href="/palvelut">Palvelut</a>
+                    <a href="/yhteystiedot">Yhteystiedot</a>
+                </nav>
+            </div>
+            <div class="blog-footer__legal">
+                <p>&copy; 2024 The Good Side Oy</p>
+                <nav>
+                    <a href="/tietosuoja">Tietosuoja</a> &nbsp;•&nbsp; 
+                    <a href="/kayttoehdot">Käyttöehdot</a> &nbsp;•&nbsp; 
+                    <a href="/saavutettavuus">Saavutettavuus</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>
