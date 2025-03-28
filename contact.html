@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ota yhteyttä The Good Side - Autamme tuotetiimejä rakentamaan menestyvää SaaS-liiketoimintaa">
+    <title>Ota yhteyttä | The Good Side</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- HubSpot Form Script -->
+    <script src="https://js-eu1.hsforms.net/forms/embed/145360432.js" defer></script>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="/" class="nav__logo">
+                <img src="images/brand/logo.webp" alt="The Good Side" width="140" height="32">
+            </a>
+            <button class="nav__toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu">
+                <li><a href="/#palvelut">Palvelut</a></li>
+                <li><a href="/#referenssit">Referenssit</a></li>
+                <li><a href="/blog">Blogi</a></li>
+                <li><a href="/#materiaalit">Materiaalit</a></li>
+                <li><a href="/#meista">Meistä</a></li>
+                <li><a href="/#hinnat">Hinnat</a></li>
+                <li><a href="/contact.html" class="btn btn--primary">Ota yhteyttä</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <h1>Jutellaan<br>tuotteesi<br>tulevaisuudesta</h1>
+                        <p class="contact-description">Varaa suoraan aika kalenterista tai jätä yhteydenottopyyntö niin palaan asiaan mahdollisimman pian.</p>
+                        <div class="contact-person">
+                            <p><strong>Mikki Aalto-Ylevä</strong><br>
+                            040 869 8887<br>
+                            mikki@goodside.fi</p>
+                        </div>
+                    </div>
+                    <div class="contact-booking">
+                        <!-- Cal inline embed code begins -->
+                        <div style="width:100%;height:600px;overflow:scroll" id="my-cal-inline"></div>
+                        <script type="text/javascript">
+                            (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                            Cal("init", "kartoitustapaaminen", {origin:"https://cal.com"});
+
+                            Cal.ns.kartoitustapaaminen("inline", {
+                                elementOrSelector:"#my-cal-inline",
+                                config: {"layout":"month_view"},
+                                calLink: "aaltoyleva/kartoitustapaaminen",
+                            });
+
+                            Cal.ns.kartoitustapaaminen("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                        </script>
+                        <!-- Cal inline embed code ends -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-content">
+                    <h2>Tai jätä yhteydenottopyyntö</h2>
+                    <p>Jos et löydä sopivaa aikaa tai haluat mieluummin että otan yhteyttä, täytä lomake niin palaan asiaan mahdollisimman pian.</p>
+                    <div class="contact-form">
+                        <div class="hs-form-frame" data-region="eu1" data-form-id="8bc5845c-348d-4ba7-baea-ebd46b11b0a0" data-portal-id="145360432"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__bottom">
+                <div class="footer__legal">
+                    <p>&copy; 2025 The Good Side Oy. Kaikki oikeudet pidätetään.</p>
+                    <nav class="footer__legal-nav">
+                        <a href="/tietosuoja">Tietosuoja</a> &nbsp;•&nbsp; <a href="/kayttoehdot">Käyttöehdot</a> &nbsp;•&nbsp; <a href="/saavutettavuus">Saavutettavuus</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 
