@@ -1,0 +1,5 @@
+[33mcommit f8ad7690016ec74e2b5717a8174c5d3ce908a79d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Liikemies-glitch <mikki@goodside.fi>
+Date:   Fri Mar 28 16:17:54 2025 +0200
+
+    fix: Remove global smooth scroll behavior to fix navigation issues
