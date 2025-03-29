@@ -1041,7 +1041,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pricing-card {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: var(--spacing-lg) var(--spacing-lg);
     border-radius: 20px;
     border: 1px solid rgba(255, 0, 84, 0.1);
@@ -1049,7 +1049,7 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     max-width: 350px;
     margin: 0 auto;
 }
