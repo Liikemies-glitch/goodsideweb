@@ -91,7 +91,14 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(5px);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
     z-index: 100;
+    transition: background-color 0.3s ease;
 }
+
+[data-theme="dark"] .header {
+    background-color: rgba(17, 17, 17, 0.98);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
 .nav {
     display: flex;
     align-items: center;
@@ -125,6 +132,11 @@ h1, h2, h3, h4, h5, h6 {
     width: auto;
     display: block;
     filter: brightness(0) saturate(100%) invert(7%) sepia(19%) saturate(1400%) hue-rotate(213deg) brightness(94%) contrast(95%);
+    transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .nav__logo img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 /* Add styles for the mobile toggle button */
@@ -144,6 +156,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--text-color);
     margin: 5px 0;
     transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .nav__toggle span {
+    background-color: var(--text-primary);
 }
 
 /* Style the toggle button when the menu is active (e.g., 'X' icon) */
@@ -190,6 +206,10 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 400;
         transition: color 0.3s ease;
     }
+    [data-theme="dark"] .nav__menu a {
+        color: var(--text-primary);
+    }
+
     .nav__menu a:hover {
         color: var(--primary-color);
     }
@@ -233,10 +253,19 @@ h1, h2, h3, h4, h5, h6 {
         gap: 0; /* Reset gap for vertical layout */
     }
 
+    [data-theme="dark"] .nav__menu {
+        background-color: var(--surface);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
     .nav__menu li {
         width: 100%;
         text-align: center;
         border-bottom: 1px solid var(--border-color);
+    }
+    
+    [data-theme="dark"] .nav__menu li {
+        border-bottom: 1px solid var(--border);
     }
     
     .nav__menu li:last-child {
@@ -250,6 +279,10 @@ h1, h2, h3, h4, h5, h6 {
         color: var(--text-color);
         text-decoration: none;
         font-weight: 500;
+    }
+    
+    [data-theme="dark"] .nav__menu a {
+        color: var(--text-primary);
     }
     
     .nav__menu a:hover {
