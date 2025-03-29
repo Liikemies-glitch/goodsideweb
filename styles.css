@@ -416,14 +416,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-.solution-card--reversed {
-    direction: rtl;
-}
-
-.solution-card--reversed .solution-card__content {
-    direction: ltr;
-}
-
 .solution-card__image {
     width: 100%;
     height: 300px;
