@@ -114,12 +114,52 @@ h1, h2, h3, h4, h5, h6 {
     filter: brightness(0) saturate(100%) invert(7%) sepia(19%) saturate(1400%) hue-rotate(213deg) brightness(94%) contrast(95%);
 }
 
+/* Add styles for the mobile toggle button */
+.nav__toggle {
+    display: none; /* Initially hidden, shown via media query */
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 101; /* Ensure it's above other header content */
+}
+
+.nav__toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style the toggle button when the menu is active (e.g., 'X' icon) */
+.nav__toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav__toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav__toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 @media (min-width: 768px) {
     .nav__toggle {
-        display: none;
+        display: none; /* Hide toggle on larger screens */
     }
     .nav__menu {
-        display: flex;
+        display: flex; /* Show menu inline on larger screens */
+        position: static; /* Reset mobile positioning */
+        background: none;
+        flex-direction: row;
+        padding: 0;
+        box-shadow: none;
+        height: auto;
+        width: auto;
+        /* Keep other desktop styles */
         align-items: center;
         gap: var(--spacing-md);
         list-style: none;
@@ -132,6 +172,65 @@ h1, h2, h3, h4, h5, h6 {
     }
     .nav__menu a:hover {
         color: var(--primary-color);
+    }
+}
+
+/* Styles for mobile menu */
+@media (max-width: 767px) {
+    .nav__toggle {
+        display: block; /* Show toggle on smaller screens */
+    }
+
+    .nav__menu {
+        /* display is handled by JS, we just need layout */
+        position: absolute;
+        top: 5rem; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: var(--background);
+        flex-direction: column;
+        padding: var(--spacing-md) 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: calc(100vh - 5rem); /* Full height minus header */
+        overflow-y: auto; /* Allow scrolling if content overflows */
+        align-items: center; /* Center items vertically */
+        gap: 0; /* Reset gap for vertical layout */
+    }
+
+    .nav__menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav__menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav__menu a {
+        display: block; /* Make links take full width */
+        padding: var(--spacing-md) 0;
+        width: 100%;
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .nav__menu a:hover {
+        background-color: var(--light-background);
+        color: var(--primary-color);
+    }
+
+    .nav__menu a.btn--primary {
+        margin: var(--spacing-md) auto;
+        width: calc(100% - 2 * var(--spacing-md)); /* Add some padding */
+        max-width: 300px;
+        color: white; /* Ensure button text is white */
+        text-decoration: none; /* Ensure no underline */
+    }
+     .nav__menu a.btn--primary:hover {
+        color: white; /* Keep text white on hover */
+        background-color: #E6004C; /* Darker primary color */
     }
 }
 
