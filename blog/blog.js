@@ -18,7 +18,10 @@ function toggleTheme() {
     localStorage.setItem('theme', newTheme);
 }
 
-themeToggle.addEventListener('click', toggleTheme);
+// Add null check for themeToggle
+if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+}
 prefersDarkScheme.addEventListener('change', initTheme);
 initTheme();
 
@@ -35,10 +38,16 @@ class BlogManager {
         // DOM elements
         this.grid = document.getElementById('blog-grid');
         this.spinner = document.getElementById('loading-spinner');
-        this.searchInput = document.getElementById('blog-search');
-        this.filterTags = document.getElementById('filter-tags');
+        this.searchInput = document.getElementById('blog-search'); // Might be null
+        this.filterTags = document.getElementById('filter-tags'); // Might be null
         this.template = document.getElementById('article-template');
         
+        // Check if essential elements exist
+        if (!this.grid || !this.spinner || !this.template) {
+            console.error('Essential blog elements (grid, spinner, or template) not found!');
+            return; // Stop initialization if essential parts are missing
+        }
+
         // Bind events
         this.bindEvents();
         
@@ -56,25 +65,31 @@ class BlogManager {
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         
-        // Optimized search with debouncing
-        let searchTimeout;
-        this.searchInput.addEventListener('input', (e) => {
-            clearTimeout(searchTimeout);
-            searchTimeout = setTimeout(() => {
-                this.searchQuery = e.target.value;
-                this.resetAndReload();
-            }, 300);
-        });
+        // Add null check for searchInput
+        if (this.searchInput) {
+            // Optimized search with debouncing
+            let searchTimeout;
+            this.searchInput.addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => {
+                    this.searchQuery = e.target.value;
+                    this.resetAndReload();
+                }, 300);
+            });
+        }
         
-        // Category filtering
-        this.filterTags.addEventListener('click', (e) => {
-            if (e.target.classList.contains('filter-tag')) {
-                this.filterTags.querySelector('.active').classList.remove('active');
-                e.target.classList.add('active');
-                this.currentCategory = e.target.dataset.category;
-                this.resetAndReload();
-            }
-        });
+        // Add null check for filterTags
+        if (this.filterTags) {
+            // Category filtering
+            this.filterTags.addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-tag')) {
+                    this.filterTags.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    this.currentCategory = e.target.dataset.category;
+                    this.resetAndReload();
+                }
+            });
+        }
     }
     
     async loadArticles() {

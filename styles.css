@@ -98,9 +98,22 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: space-between;
     height: 5rem;
 }
+
+.nav__left {
+    display: flex;
+    align-items: center;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
 .nav__menu {
     display: none;
 }
+
 .nav__logo {
     display: flex;
     align-items: center;
@@ -161,8 +174,15 @@ h1, h2, h3, h4, h5, h6 {
         width: auto;
         /* Keep other desktop styles */
         align-items: center;
-        gap: var(--spacing-md);
         list-style: none;
+        margin: 0; /* Remove margin */
+    }
+    .nav__menu > * {
+        /* Add margin for spacing between menu items now that gap is removed */
+        margin-right: var(--spacing-sm);
+    }
+    .nav__menu > *:last-child {
+        margin-right: 0; /* No margin for the last item */
     }
     .nav__menu a {
         text-decoration: none;
@@ -173,12 +193,28 @@ h1, h2, h3, h4, h5, h6 {
     .nav__menu a:hover {
         color: var(--primary-color);
     }
+
+    .nav__right {
+        display: flex;
+        align-items: center;
+        gap: 0; /* Remove gap */
+    }
 }
 
 /* Styles for mobile menu */
 @media (max-width: 767px) {
     .nav__toggle {
         display: block; /* Show toggle on smaller screens */
+    }
+
+    .nav__right {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .blog-nav__controls {
+        margin-left: 0; /* Remove margin on mobile */
     }
 
     .nav__menu {
@@ -1771,4 +1807,29 @@ h1, h2, h3, h4, h5, h6 {
     .reference-card__content {
         padding: var(--spacing-md);
     }
+}
+
+/* Add styles for theme toggle positioning */
+.blog-nav__controls {
+    margin-left: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: var(--text-color);
+    stroke-width: 2;
+    fill: none;
 } 

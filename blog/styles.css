@@ -455,9 +455,15 @@ body {
 }
 
 .blog-nav__controls {
-    position: absolute;
-    top: 0; /* Align to the top of the container */
-    right: 1rem; /* Align to the right with some padding */
+    /* Removed absolute positioning to prevent hiding */
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 1rem; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding: 0.5rem; */ /* Removed padding */
+    margin-left: var(--spacing-sm); /* Added left margin for spacing */
 }
 
 /* Override hero background for blog page */
