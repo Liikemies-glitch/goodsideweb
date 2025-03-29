@@ -1865,4 +1865,63 @@ h1, h2, h3, h4, h5, h6 {
     stroke: var(--text-color);
     stroke-width: 2;
     fill: none;
+}
+
+/* Content Sections */
+.content-section {
+    padding: var(--spacing-xxl) 0;
+}
+
+.content-section.bg-light {
+    background-color: var(--light-background);
+}
+
+.content-block {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+    .grid--2-cols,
+    .grid--3-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Feature Cards */
+.feature-card {
+    padding: var(--spacing-lg);
+    background: var(--background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-color);
+}
+
+.feature-card__text {
+    color: var(--light-text);
+    line-height: 1.6;
 } 
