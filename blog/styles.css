@@ -280,12 +280,13 @@ body {
     font-weight: normal;
     border-radius: 1rem;
     display: inline-block;
-    margin-left: 1.5rem;
+    margin: 1rem 0 0 1.5rem;
 }
 
 .blog-card__content {
     display: block;
     text-align: left;
+    padding: 0.5rem 1.5rem 1.5rem;
 }
 
 .blog-card__title {
