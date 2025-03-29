@@ -1284,7 +1284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-card__link:hover {
-    text-decoration: underline;
+    text-decoration: none; /* Estä alleviivaus hover-tilassa */
 }
 
 @media (max-width: 1024px) {
