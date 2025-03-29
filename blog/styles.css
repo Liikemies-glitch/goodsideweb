@@ -206,7 +206,7 @@ body {
     border: 1px solid var(--border);
     color: var(--text-secondary);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 300;
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -274,9 +274,9 @@ body {
 
 .blog-card__category {
     padding: 0.25rem 0.75rem;
-    background: var(--primary-color);
-    color: white;
-    font-size: 0.75rem;
+    background: rgba(255, 0, 55, 0.136);
+    color: rgb(255, 0, 55);
+    font-size: 0.875rem;
     font-weight: normal;
     border-radius: 1rem;
     display: inline-block;
