@@ -1548,7 +1548,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact Page Styles */
 .contact-hero {
-    padding: calc(var(--spacing-xxl) * 1.5) 0 var(--spacing-xxl);
+    padding: 8rem 0 2rem;
     background-color: var(--light-background);
     min-height: 100vh;
 }
@@ -1561,7 +1561,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-content {
-    padding-top: var(--spacing-xl);
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
