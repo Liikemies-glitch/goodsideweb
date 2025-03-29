@@ -1660,16 +1660,21 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: left;
+    text-align: center;
 }
 
 .hero--small .hero__subtitle {
     font-size: 1.25rem;
     max-width: 600px;
+    margin-bottom: 0;
+}
+
+.hero--small .hero__content {
+    text-align: center;
 }
 
 .references {
-    padding: var(--spacing-sm) 0 var(--spacing-xxl);
+    padding: var(--spacing-xxl) 0;
     background-color: var(--light-background);
 }
 

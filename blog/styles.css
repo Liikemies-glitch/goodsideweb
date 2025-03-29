@@ -129,8 +129,8 @@ body {
 }
 
 .hero__title {
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 1;
+    font-size: 3.5rem;
+    line-height: 1.2;
     margin: 0 auto var(--spacing-lg);
     font-weight: 600;
     max-width: 1000px;
@@ -447,4 +447,20 @@ body {
     html {
         scroll-behavior: smooth;
     }
+}
+
+/* New styles for positioning controls */
+.blog-controls-container {
+    position: relative; /* Needed for absolute positioning of children */
+}
+
+.blog-nav__controls {
+    position: absolute;
+    top: 0; /* Align to the top of the container */
+    right: 1rem; /* Align to the right with some padding */
+}
+
+/* Override hero background for blog page */
+.hero.hero--small {
+    background-color: var(--background);
 }
