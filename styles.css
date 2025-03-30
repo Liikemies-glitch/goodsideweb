@@ -407,6 +407,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: var(--spacing-lg) 0;
     will-change: transform;
     transform: translateZ(0);
+    width: max-content;
 }
 
 .logo-item {
@@ -417,7 +418,6 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     padding: var(--spacing-xs);
     transition: all 0.3s ease;
-    margin-right: var(--spacing-md);
 }
 
 .logo-item img {
@@ -429,6 +429,7 @@ h1, h2, h3, h4, h5, h6 {
     filter: grayscale(100%);
     opacity: 0.6;
     transition: all 0.3s ease;
+    transform: scale(1.1);
 }
 
 .logo-item:hover {
@@ -445,23 +446,20 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-220px * 10 - var(--spacing-md) * 10));
+        transform: translateX(-50%);
     }
 }
 
 @media (max-width: 768px) {
     .logo-wall__grid {
-        animation: none;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
+        animation: scroll 20s linear infinite;
+        overflow-x: hidden;
         padding: var(--spacing-lg) var(--spacing-md);
     }
 
     .logo-item {
-        flex: 0 0 180px;
-        height: 90px;
-        scroll-snap-align: start;
+        flex: 0 0 160px;
+        height: 80px;
     }
 }
 /* Problems Section */
