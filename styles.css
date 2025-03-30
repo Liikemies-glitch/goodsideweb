@@ -609,7 +609,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 100px;
     font-size: 0.875rem;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .solution-card h3 {
@@ -1902,10 +1902,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Feature Cards */
 .feature-card {
     padding: var(--spacing-xl);
-    background: var(--background);
+    background: white;
     border-radius: 20px;
-    border: 1px solid rgba(255, 0, 84, 0.1);
-    box-shadow: 0 4px 20px rgba(255, 0, 84, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -1918,8 +1917,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 0, 84, 0.2);
-    box-shadow: 0 8px 30px rgba(255, 0, 84, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card__title {
