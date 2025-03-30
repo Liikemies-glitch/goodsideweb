@@ -3,113 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The Good Side - Asiakasreferenssit ja menestystarinat">
-    <title>Referenssit | The Good Side</title>
-    <!-- Preload fonts for better performance -->
+    <title>Palvelut - Kiihdytä SaaS-kasvusi</title>
+    <meta name="description" content="Autamme SaaS-yrityksiä kasvamaan yhdistämällä tuotestrategian, UX/UI-suunnittelun ja markkinoinnin. Selkeät palvelut SaaS-perustajille ja tuoteomistajille.">
+    <meta name="keywords" content="SaaS-kasvu, tuotepositiointi, käyttäjäpolut, ostopolut, UX-suunnittelu, UI-suunnittelu, SaaS-konsultointi, tuotestrategia">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon links (replace with your actual favicons) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
-    <!-- Header/Navigation -->
+
+    <!-- Header (Sama kuin muilla sivuilla - tarkista/kopioi rakenne) -->
     <header class="header">
         <nav class="nav container">
-            <a href="/" class="nav__logo">
-                <img src="images/brand/logo.webp" alt="The Good Side" width="140" height="32">
-            </a>
-            <button class="nav__toggle" aria-label="Toggle menu">
+            <div class="nav__left">
+                <a href="/" class="nav__logo">
+                    <img src="images/brand/logo.webp" alt="The Good Side" width="140" height="32">
+                </a>
+            </div>
+            <button class="nav__toggle" aria-label="Avaa valikko">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav__menu">
+                <li><a href="/">Etusivu</a></li>
                 <li><a href="/palvelut.html">Palvelut</a></li>
-                <li><a href="/references.html">Referenssit</a></li>
-                <li><a href="/blog">Blogi</a></li>
-                <li><a href="/#materiaalit">Materiaalit</a></li>
-                <li><a href="/#hinnat">Hinnat</a></li>
+                <li><a href="/referenssit.html">Referenssit</a></li>
+                <li><a href="/blogi.html">Blogi</a></li>
                 <li><a href="/contact.html" class="btn btn--primary">Ota yhteyttä</a></li>
+                 <!-- Lisää Theme Toggle jos käytössä -->
+                <!--
+                <li class="blog-nav__controls">
+                    <button class="theme-toggle" id="theme-toggle" title="Vaihda teemaa">
+                        <svg class="theme-toggle__icon" viewBox="0 0 24 24"><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-16a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg>
+                    </button>
+                </li>
+                 -->
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- References Hero Section -->
+        <!-- Hero Section -->
         <section class="hero hero--small">
+            <div class="container hero__content">
+                <h1 class="hero__title">Kiihdytä SaaS-kasvusi asiantuntijoiden avulla</h1>
+                <p class="hero__subtitle">Autamme SaaS-yrityksiä saavuttamaan kestävää kasvua yhdistämällä tuotteen, designin ja markkinoinnin strategiseksi kokonaisuudeksi.</p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="content-section">
             <div class="container">
-                <div class="hero__content">
-                    <h1 class="hero__title">Asiakasreferenssit</h1>
-                    <p class="hero__subtitle">Tutustu menestystarinoihimme ja katso miten olemme auttaneet asiakkaitamme kasvamaan</p>
+                <div class="section__header" style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+                     <h2 class="section__title">Palvelumme SaaS-yrityksille</h2>
+                     <p class="section__subtitle">Keskitymme ratkaisemaan yleisimmät kasvun esteet SaaS-polullasi.</p>
+                </div>
+
+                <div class="grid grid--3-cols">
+                    <!-- Service 1: Tuotepositiointi -->
+                    <div class="feature-card"> <!-- Käytetään olemassa olevaa feature-card tyyliä -->
+                        <h3 class="feature-card__title">1. Tuotepositiointi</h3>
+                        <p><strong>Ongelma:</strong> Kasvustrategian toteutus ontuu resurssipulan tai epäselvän suunnan vuoksi. Tuote ei erotu kilpailijoista.</p>
+                        <p><strong>Ratkaisu:</strong> Kirkastamme ydinviestinne ja kohderyhmänne. Yhdistämme tuotestrategian, designin ja markkinoinnin tukemaan positiointia.</p>
+                        <p><strong>Hyödyt:</strong> Selkeämpi markkina-asema, tehokkaampi myynti ja markkinointi, parempi asiakasymmärrys.</p>
+                        <p><strong>Mittari:</strong> Markkinaosuuden kasvu, konversioasteet, asiakaspalaute.</p>
+                        <p><em>Avainsanat: Tuotepositiointi, SaaS-strategia, markkina-asema</em></p>
+                    </div>
+
+                    <!-- Service 2: Käyttäjäpolut/Ostopolut -->
+                    <div class="feature-card">
+                        <h3 class="feature-card__title">2. Käyttäjä- & Ostopolut</h3>
+                        <p><strong>Ongelma:</strong> Sivusto tai sovellus ei tuota tarpeeksi liidejä tai kokeilukäyttäjiä. Asiakkaat tippuvat matkan varrella.</p>
+                        <p><strong>Ratkaisu:</strong> Suunnittelemme ja optimoimme käyttäjä- ja ostopolut datalähtöisesti konversioiden maksimoimiseksi.</p>
+                        <p><strong>Hyödyt:</strong> Enemmän laadukkaita liidejä, korkeampi konversioprosentti, parempi asiakaskokemus.</p>
+                        <p><strong>Mittari:</strong> Konversioprosentti (eri vaiheissa), liidien määrä ja laatu, asiakashankintakustannus (CAC).</p>
+                        <p><em>Avainsanat: Käyttäjäpolku, ostopolku, SaaS-konversio, liidien generointi</em></p>
+                    </div>
+
+                    <!-- Service 3: UX/UI Suunnittelu -->
+                    <div class="feature-card">
+                         <h3 class="feature-card__title">3. UX/UI Suunnittelu</h3>
+                         <p><strong>Ongelma:</strong> Tuotteen käyttöliittymä on monimutkainen, vanhentunut tai ei vastaa käyttäjien tarpeita, mikä heikentää käyttäjäkokemusta ja sitoutumista.</p>
+                         <p><strong>Ratkaisu:</strong> Luomme intuitiivisia, moderneja ja käyttäjälähtöisiä käyttöliittymiä ja -kokemuksia, jotka vakuuttavat ja sitouttavat.</p>
+                         <p><strong>Hyödyt:</strong> Parempi käyttäjätyytyväisyys, vähentynyt asiakaspoistuma (churn), vahvempi brändimielikuva.</p>
+                         <p><strong>Mittari:</strong> Käyttäjätyytyväisyys (esim. CSAT, NPS), tehtävien onnistumisprosentti, käytettävyyspisteet.</p>
+                         <p><em>Avainsanat: UX-suunnittelu, UI-suunnittelu, SaaS-käytettävyys, tuotesuunnittelu</em></p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- References Grid -->
-        <section class="references">
+        <!-- Differentiation Section -->
+        <section class="content-section bg-light">
             <div class="container">
-                <div class="references__grid">
-                    <!-- Reference 1 -->
-                    <article class="reference-card">
-                        <div class="reference-card__image">
-                            <img src="images/references/techcorp.png" alt="TechCorp Oy - Asiakasreferenssi" width="400" height="300">
-                        </div>
-                        <div class="reference-card__content">
-                            <h2 class="reference-card__title">TechCorp Oy</h2>
-                            <p class="reference-card__description">"The Good Siden avulla saimme selkeän suunnan tuotestrategiaamme ja kasvatuimme 200% vuodessa. Heidän asiantuntemuksensa SaaS-alalla on vertaansa vailla."</p>
-                            <div class="reference-card__meta">
-                                <span class="reference-card__author">- Maria Virtanen, CEO</span>
-                                <span class="reference-card__results">+200% kasvu</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Reference 2 -->
-                    <article class="reference-card">
-                        <div class="reference-card__image">
-                            <img src="images/references/fintech.png" alt="FinTech Solutions - Asiakasreferenssi" width="400" height="300">
-                        </div>
-                        <div class="reference-card__content">
-                            <h2 class="reference-card__title">FinTech Solutions</h2>
-                            <p class="reference-card__description">"Käyttäjäkokemuksen parantaminen oli kriittistä liiketoimintamme kannalta. The Good Side auttoi meitä luomaan intuitiivisen ja tehokkaan ratkaisun."</p>
-                            <div class="reference-card__meta">
-                                <span class="reference-card__author">- Jussi Mäkinen, Product Lead</span>
-                                <span class="reference-card__results">+150% käyttäjätyytyväisyys</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Reference 3 -->
-                    <article class="reference-card">
-                        <div class="reference-card__image">
-                            <img src="images/references/edutech.png" alt="EduTech Pro - Asiakasreferenssi" width="400" height="300">
-                        </div>
-                        <div class="reference-card__content">
-                            <h2 class="reference-card__title">EduTech Pro</h2>
-                            <p class="reference-card__description">"Markkinointistrategiamme oli uudistettava. The Good Side auttoi meitä luomaan vahvan brändin ja saavuttamaan uusia markkinoita."</p>
-                            <div class="reference-card__meta">
-                                <span class="reference-card__author">- Anna Korhonen, Marketing Director</span>
-                                <span class="reference-card__results">+300% markkinaosuus</span>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+                 <div class="section__header" style="text-align: center; max-width: 800px; margin: 0 auto var(--spacing-xl);">
+                    <h2 class="section__title">Miksi valita meidät?</h2>
+                 </div>
+                 <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="margin-bottom: var(--spacing-md); font-size: 1.125rem; color: var(--light-text);">Emme ole pelkkä suunnittelutoimisto tai markkinointikonsultti. Lähestymme SaaS-kasvua kokonaisvaltaisesti – yhdistämme syvällisen ymmärryksen tuotekehityksestä, käyttäjäkeskeisestä designista ja tuloshakuisesta markkinoinnista.</p>
+                    <p style="font-size: 1.125rem; color: var(--light-text);">Tämä integroitu malli on todistetusti tuottanut tuloksia yli 10 SaaS-asiakkaallemme eri kasvuvaiheissa. Emme tarjoa pikavoittoja, vaan rakennamme kestävää kasvua kanssasi.</p>
+                     <!-- Voit lisätä linkin referensseihin myöhemmin -->
+                     <!-- <a href="/referenssit.html" class="btn btn--secondary" style="margin-top: var(--spacing-lg);">Tutustu tuloksiin</a> -->
+                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="contact-form-section">
+        <!-- Call to Action Section -->
+        <section class="book-meeting"> <!-- Käytetään olemassa olevaa book-meeting tyyliä -->
             <div class="container">
-                <div class="form-content" style="text-align: left;">
-                    <h2>Haluatko olla seuraava menestystarinamme?</h2>
-                    <p>Ota yhteyttä ja keskustellaan miten voimme auttaa sinua kasvamaan</p>
+                <h2 class="section__title">Valmiina viemään SaaS-tuotteesi seuraavalle tasolle?</h2>
+                <p class="section__subtitle">Keskustellaan, miten voimme auttaa juuri sinun yritystäsi saavuttamaan kasvutavoitteenne. Varaa maksuton alkukartoitus tai lähetä viesti.</p>
+                <div style="text-align: center;">
                     <a href="/contact.html" class="btn btn--primary">Ota yhteyttä</a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (Korvattu index.html:n footerilla) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -132,18 +150,18 @@
                 <div class="footer__links">
                     <h3>Palvelut</h3>
                     <ul>
-                        <li><a href="/#solutions">Tuotepositiointi</a></li>
-                        <li><a href="/#solutions">Käyttäjäpolut</a></li>
-                        <li><a href="/#solutions">Käyttöliittymäsuunnittelu</a></li>
+                        <li><a href="#solutions">Tuotepositiointi</a></li>
+                        <li><a href="#solutions">Käyttäjäpolut</a></li>
+                        <li><a href="#solutions">Käyttöliittymäsuunnittelu</a></li>
                     </ul>
                 </div>
                 <div class="footer__links">
                     <h3>Yritys</h3>
                     <ul>
                         <li><a href="/blog">Blogi</a></li>
-                        <li><a href="/#testimonials">Asiakastarinat</a></li>
-                        <li><a href="/#faq">UKK</a></li>
-                        <li><a href="/contact.html">Ota yhteyttä</a></li>
+                        <li><a href="#testimonials">Asiakastarinat</a></li>
+                        <li><a href="#faq">UKK</a></li>
+                        <li><a href="#contact">Ota yhteyttä</a></li>
                     </ul>
                 </div>
                 <div class="footer__links">
@@ -192,7 +210,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="main.js"></script>
+    <!-- Lisää mahdolliset Javascript-tiedostot tänne, esim. mobiilivalikolle -->
+    <!-- <script src="scripts.js"></script> -->
+
 </body>
 </html> 
