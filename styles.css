@@ -1878,45 +1878,121 @@ h1, h2, h3, h4, h5, h6 {
 /* Grid System */
 .grid {
     display: grid;
-    gap: var(--spacing-lg);
-}
-
-.grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .grid--3-cols {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 768px) {
-    .grid--2-cols,
-    .grid--3-cols {
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
 }
 
 /* Feature Cards */
 .feature-card {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     background: var(--background);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 0, 84, 0.1);
+    box-shadow: 0 4px 20px rgba(255, 0, 84, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    width: 100%;
 }
 
 .feature-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(255, 0, 84, 0.2);
+    box-shadow: 0 8px 30px rgba(255, 0, 84, 0.15);
 }
 
 .feature-card__title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--secondary-color);
     margin-bottom: var(--spacing-sm);
-    color: var(--text-color);
+    line-height: 1.3;
 }
 
-.feature-card__text {
+.feature-card p {
     color: var(--light-text);
     line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.125rem;
+}
+
+.feature-card p strong {
+    color: var(--secondary-color);
+    font-weight: 500;
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p em {
+    color: var(--primary-color);
+    font-style: normal;
+    font-size: 1rem;
+    display: block;
+    margin-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-card__title {
+        font-size: 1.75rem;
+    }
+    
+    .feature-card p {
+        font-size: 1rem;
+    }
+    
+    .feature-card p strong {
+        font-size: 1.125rem;
+    }
+}
+
+/* Services Page Styles */
+.services-page .section__header {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.services-page .section__title,
+.services-page .section__subtitle,
+.services-page .hero__content {
+    text-align: left;
+}
+
+.services-page .hero--small .hero__title {
+    text-align: left !important;
+}
+
+.services-page .hero__title,
+.services-page .hero__subtitle {
+    max-width: 900px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.services-page .container > div[style*="text-align: center"] {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Keep the CTA section centered */
+.services-page .book-meeting {
+    text-align: center;
+}
+
+.services-page .book-meeting .section__title,
+.services-page .book-meeting .section__subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 } 
