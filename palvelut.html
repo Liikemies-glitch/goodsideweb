@@ -20,21 +20,20 @@
     <!-- Header (Sama kuin muilla sivuilla - tarkista/kopioi rakenne) -->
     <header class="header">
         <nav class="nav container">
-            <div class="nav__left">
-                <a href="/" class="nav__logo">
-                    <img src="images/brand/logo.webp" alt="The Good Side" width="140" height="32">
-                </a>
-            </div>
+            <a href="/" class="nav__logo">
+                <img src="images/brand/logo.webp" alt="The Good Side" width="140" height="32">
+            </a>
             <button class="nav__toggle" aria-label="Avaa valikko">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <ul class="nav__menu">
-                <li><a href="/">Etusivu</a></li>
                 <li><a href="/palvelut.html">Palvelut</a></li>
-                <li><a href="/referenssit.html">Referenssit</a></li>
-                <li><a href="/blogi.html">Blogi</a></li>
+                <li><a href="/references.html">Referenssit</a></li>
+                <li><a href="/blog">Blogi</a></li>
+                <li><a href="/#materiaalit">Materiaalit</a></li>
+                <li><a href="/#hinnat">Hinnat</a></li>
                 <li><a href="/contact.html" class="btn btn--primary">Ota yhteyttä</a></li>
                  <!-- Lisää Theme Toggle jos käytössä -->
                 <!--
@@ -48,7 +47,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="services-page">
         <!-- Hero Section -->
         <section class="hero hero--small">
             <div class="container hero__content">
@@ -65,7 +64,7 @@
                      <p class="section__subtitle">Keskitymme ratkaisemaan yleisimmät kasvun esteet SaaS-polullasi.</p>
                 </div>
 
-                <div class="grid grid--3-cols">
+                <div>
                     <!-- Service 1: Tuotepositiointi -->
                     <div class="feature-card"> <!-- Käytetään olemassa olevaa feature-card tyyliä -->
                         <h3 class="feature-card__title">1. Tuotepositiointi</h3>

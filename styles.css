@@ -1960,12 +1960,25 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left !important;
     margin-left: 0;
     margin-right: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.services-page .hero .container,
+.services-page .content-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 .services-page .section__title,
 .services-page .section__subtitle,
 .services-page .hero__content {
     text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .services-page .hero--small .hero__title {
@@ -1974,8 +1987,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-page .hero__title,
 .services-page .hero__subtitle {
-    max-width: 900px;
-    margin-left: 0;
+    max-width: 1200px;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -1995,4 +2008,27 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Additional alignment fixes for services page */
+.services-page .hero {
+    padding: calc(var(--spacing-xxl) * 1.5) 0 var(--spacing-xxl);
+    text-align: left;
+}
+
+.services-page .hero__content {
+    text-align: left;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.services-page .hero__cta {
+    justify-content: flex-start;
+}
+
+.services-page .feature-card {
+    max-width: 1200px;
+    margin: 0 auto;
 } 
